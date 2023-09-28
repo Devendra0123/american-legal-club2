@@ -25,14 +25,14 @@ function renderServicesSection() {
           </div>
         `).join("")
         const htmlContent = `
-        <div class="flex items-center gap-[20px] mt-[-50px]">
+        <div class="mt-[30px] lg:mt-[-50px] flex flex-col lg:flex-row items-center gap-[20px]">
         <div>
           <button class="bg-primaryBlue p-[10px] rounded-[4px] text-white text-xl">
             Explore Services
           </button>
         </div>
   
-        <div class="flex flex-col items-center border border-slate-300 shadow-xl rounded-lg p-[20px] bg-white">
+        <div class="flex flex-col items-center border border-slate-300 shadow-xl rounded-lg p-[5px] lg:p-[20px] bg-white">
           <div>
            <div class='w-max'>
              <h1 class="text-primaryBlue text-3xl font-[800]">
@@ -40,7 +40,7 @@ function renderServicesSection() {
              </h1>
            <div class="w-[100px] h-[2px] rounded-[25px] bg-primaryRed" />
           </div>
-          <div class="flex items-center gap-[70px] mt-[50px]">
+          <div class="flex items-center gap-[20px] lg:gap-[70px] mt-[50px]">
             ${cardItems}
           </div>
         </div>

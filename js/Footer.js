@@ -58,7 +58,7 @@ function renderFooterSection() {
             ).join("")
         const htmlContent = `
         <div class='w-full flex flex-col items-center gap-[30px] bg-primaryBlue pt-[120px] pb-[100px] mt-[-40px]'>
-        <div class="w-[90%] flex items-center text-white px-[40px]">
+        <div class="w-full lg:w-[90%] flex items-center gap-[20px] text-white px-[40px]">
         <div>
           <img
             src="assets/logo.png"
@@ -85,18 +85,14 @@ function renderFooterSection() {
           </div>
           </div>
   
-          <ul class="flex items-center gap-[30px]">
+          <ul class="flex items-center justify-center flex-wrap lg:flex-nowrap gap-[30px]">
             ${footerMenuItems}
           </ul>
         </div>
       </div>
         <div class='w-[90%] h-[2px] rounded-[25px] bg-white ' />
        
-        <div class="w-[85%] flex items-center justify-between text-white px-[50px] mt-[30px]">
-        <select class="text-black rounded-lg p-[5px] text-[13px] outline-none">
-         ${languageData}
-        </select>
-  
+        <div class="w-full lg:w-[85%] flex items-center justify-center lg:justify-between text-white px-[50px] mt-[30px]">
         <div class="flex items-center opacity-75">
           <p>${copyRightText}</p>
           <ul class="flex items-center gap-[20px] ml-[30px]">

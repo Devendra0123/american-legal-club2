@@ -37,7 +37,7 @@ function renderWhyChooseSection() {
         </h1>
   
         <div>
-        <div class="flex justify-center items-center gap-[20px]">
+        <div class="flex flex-wrap lg:flex-nowrap justify-center items-center gap-[20px]">
         <div class="flex flex-col gap-[30px]">
           <div class="bg-primaryBlue w-[280px] h-[300px] text-white flex flex-col items-center gap-[20px] rounded-lg p-[20px] shadow-xl">
             <img src=${data[0].icon} alt="icon" class="w-[70px] h-[70px]" />
@@ -59,7 +59,7 @@ function renderWhyChooseSection() {
         </div>
         <div>
           <div>
-          <div class="bg-lightOrange w-[280px] h-[640px] text-xl flex flex-col items-center gap-[20px] rounded-lg p-[20px] shadow-xl">
+          <div class="bg-lightOrange w-[280px] h-max lg:h-[640px] text-xl flex flex-col items-center gap-[20px] rounded-lg p-[20px] shadow-xl">
           <img src=${data[3].icon} alt="icon" class="w-[70px] h-[70px]" />
           <h1 class="text-primaryRed text-xl font-bold">${data[3].title}</h1>
           <p>${data[3].description}</p>

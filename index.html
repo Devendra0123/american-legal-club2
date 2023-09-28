@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Your Website</title>
     <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script>
         tailwind.config = {
             theme: {
@@ -26,12 +27,14 @@
     </script>
 </head>
 
-<body>
+<body class="w-screen overlow-x-hidden ">
     <div className="w-full flex flex-col items-center">
-        <!-- Include your components here -->
-        <div id="follow-section"></div>
-        <div id="logo-section"></div>
-        <div id="navbar-section"></div>
+        <!-- Navbar -->
+        <div id="follow-section" class="hidden md:block" ></div>
+        <div id="logo-section" class="hidden md:block" ></div>
+        <div id="navbar-section" class="sticky top-0 z-10 hidden md:block"></div>
+        <!-- mobile navbar -->
+        <div id="mobileNav-section" class="max-w-screen flex justify-center md:hidden"></div>
         <!-- hero section -->
         <div id="hero-section"></div>
         <!-- about section -->
@@ -58,6 +61,7 @@
     <script src="js/FollowSection.js"></script>
     <script src="js/LogoSection.js"></script>
     <script src="js/Navbar.js"></script>
+    <script src="js/MobileNav.js"></script>
     <script src="js/HeroSection.js"></script>
     <script src="js/AboutSection.js"></script>
     <script src="js/ServicesSection.js"></script>
