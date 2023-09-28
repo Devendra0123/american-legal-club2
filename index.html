@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Your Website</title>
+    <link href="css/main.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBlue: "#2f87ce",
+                        lightBlue: "#8ccee8",
+                        primaryRed: "#f60100",
+                        lightGray: "#f4f5f7",
+                        gray1: "#dee1e6",
+                        lightOrange: "#e9e2d2"
+
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div className="w-full flex flex-col items-center">
+        <!-- Include your components here -->
+        <div id="follow-section"></div>
+        <div id="logo-section"></div>
+        <div id="navbar-section"></div>
+        <!-- hero section -->
+        <div id="hero-section"></div>
+        <!-- about section -->
+        <div class="w-screen flex justify-center">
+            <div class="w-[1000px] mt-[30px]">
+                <div id="about-section"></div>
+            </div>
+        </div>
+        <!-- service section -->
+        <div class="w-screen flex justify-center">
+            <div id="services-section"></div>
+        </div>
+
+        <!-- Why choose american legal club section -->
+        <div class="w-screen flex justify-center">
+            <div id="whyChoose-section"></div>
+        </div>
+
+        <!-- footer -->
+        <div id="footer-section"></div>
+    </div>
+
+
+    <script src="js/FollowSection.js"></script>
+    <script src="js/LogoSection.js"></script>
+    <script src="js/Navbar.js"></script>
+    <script src="js/HeroSection.js"></script>
+    <script src="js/AboutSection.js"></script>
+    <script src="js/ServicesSection.js"></script>
+    <script src="js/WhyChoose.js"></script>
+    <script src="js/Footer.js"></script>
+</body>
+
+</html>
