@@ -3,3 +3,38 @@
     padding: 0;
     box-sizing: border-box;
 }
+.hidden {
+    display: none;
+}
+
+/* Show the navItems when #navItems is the target */
+#navItems {
+    width: 85%;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    background-color: #2f87ce;
+    z-index: 10;
+}
+
+.hideOverlay{
+    display: none;
+}
+
+#overlay{
+    width: 1000%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 60%;
+}
+
+.fa-solid .fa-xmark {
+    color: black; /* Change the icon color to green */
+    font-size: 24px; /* Increase the icon size to 24 pixels */
+}

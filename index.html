@@ -28,16 +28,18 @@
 </head>
 
 <body class="max-w-[100vw] overlow-x-hidden">
+    <!-- overlay -->
+    <div id="overlay" class="hideOverlay"></div>
     <div className="w-full flex flex-col items-center">
         <!-- Navbar -->
-        <div id="follow-section" class="hidden md:block">
+        <div id="follow-section" class="hidden md:block z-10">
             <div class="text-white bg-primaryBlue w-full px-[50px] py-[10px] flex items-center justify-between">
                 <div>
                     <a href="mailto:AmericanLegalClub@gmail.com">AmericanLegalClub@gmail.com</a>
                 </div>
             </div>
         </div>
-        <div id="logo-section" class="hidden md:block">
+        <div id="logo-section" class="hidden md:block z-10">
             <div class="px-[50px] py-[20px] w-full flex items-center justify-between">
                 <div>
                     <img src="assets/logo.png" alt="logo" class="w-[150px] object-contain" />
@@ -59,29 +61,17 @@
         <div id="navbar-section" class="sticky top-0 z-10 hidden md:block">
             <div class='bg-primaryBlue flex items-center justify-center text-white p-[15px]'>
                 <ul class='flex items-center gap-[40px]'>
-                    <li>
-                        Home
-                    </li>
-                    <li>
-                        About Us
-                    </li>
-                    <li>
-                        Services
-                    </li>
-                    <li>
-                        Workflow
-                    </li>
-                    <li>
-                        Contact Us
-                    </li>
-                    <li>
-                        FAQs
-                    </li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Workflow</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
                 </ul>
             </div>
         </div>
         <!-- mobile navbar -->
-        <div id="mobileNav-section" class="max-w-screen flex justify-center md:hidden">
+        <div id="mobileNav-section" class="z-10 max-w-screen flex justify-center md:hidden">
             <div class="w-full flex flex-col">
                 <div
                     class="w-full text-white bg-primaryBlue w-full px-[50px] py-[10px] flex items-center justify-between">
@@ -90,19 +80,35 @@
                     </div>
                 </div>
 
-                <div class="p-[20px] w-full flex items-center justify-between">
+                <div class="relative p-[20px] w-full flex items-center justify-between">
                     <div>
                         <img src="assets/logo.png" alt="logo" class="w-[100px] object-contain" />
                     </div>
 
                     <div id="navIcon"
-                        class="w-[35px] h-[35px] rounded-full flex flex-col gap-[5px] justify-center items-center bg-primaryBlue text-white text-lg">
+                        class="z-[5] w-[35px] h-[35px] rounded-full flex flex-col gap-[5px] justify-center items-center bg-primaryBlue text-white text-lg">
                         <div class="w-[20px] h-[2px] bg-white rounded-full "></div>
                         <div class="w-[15px] h-[2px] bg-white rounded-full "></div>
+                    </div>
+
+                    <!-- mobile nav items -->
+                    <div id="navItems" class="hidden">
+                        <div id="crossIcon" class="absolute top-[20px] right-[20px] bg-white w-[35px] h-[35px] rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                        </div>
+                        <ul class='mt-[50px] w-full p-[20px] font-bold text-white flex flex-col items-center gap-[20px]'>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Workflow</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">FAQs</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
+
         <!-- hero section -->
         <div id="hero-section">
             <div class="relative w-full h-[85vh] flex justify-center">
@@ -308,9 +314,9 @@
                             </div>
 
                             <ul class="flex items-center justify-center flex-wrap lg:flex-nowrap gap-[30px]">
-                                <li>Privacy Policy</li>
-                                <li>Terms &amp; Conditions</li>
-                                <li>TCPA Consent</li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms &amp; Conditions</a></li>
+                                <li><a href="#">TCPA Consent</a></li>
                             </ul>
                         </div>
                     </div>
@@ -341,6 +347,23 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const showNavButton = document.getElementById('navIcon');
+        const navItems = document.getElementById('navItems');
+        const overlay = document.getElementById('overlay');
+        const crossIcon = document.getElementById('crossIcon');
+
+        showNavButton.addEventListener('click', () => {
+            navItems.classList.toggle('hidden');
+            overlay.classList.toggle('hideOverlay');
+        });
+
+        crossIcon.addEventListener('click', () => {
+            navItems.classList.add('hidden');
+            overlay.classList.add('hideOverlay');
+        });
+    </script>
 </body>
 
 </html>
