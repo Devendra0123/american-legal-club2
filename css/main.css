@@ -38,3 +38,12 @@
     color: black; /* Change the icon color to green */
     font-size: 24px; /* Increase the icon size to 24 pixels */
 }
+
+#faqAnswer1{
+    width: 100%;
+    padding: 20px;
+}
+
+.hideAnswer{
+    display: none;
+}
