@@ -1,369 +1,522 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>American Legal Club</title>
-    <link href="css/main.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/main.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primaryBlue: "#2f87ce",
-                        lightBlue: "#8ccee8",
-                        primaryRed: "#f60100",
-                        lightGray: "#f4f5f7",
-                        gray1: "#dee1e6",
-                        lightOrange: "#e9e2d2"
-
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primaryBlue: "#2f87ce",
+              lightBlue: "#8ccee8",
+              primaryRed: "#f60100",
+              lightGray: "#f4f5f7",
+              gray1: "#dee1e6",
+              lightOrange: "#e9e2d2",
+            },
+          },
+        },
+      };
     </script>
-</head>
+  </head>
 
-<body class="max-w-[100vw] overlow-x-hidden">
+  <body class="max-w-[100vw] overlow-x-hidden">
     <!-- overlay -->
     <div id="overlay" class="hideOverlay"></div>
     <div className="w-full flex flex-col items-center">
-        <!-- Navbar -->
-        <div id="follow-section" class="hidden md:block z-10">
-            <div class="text-white bg-primaryBlue w-full px-[50px] py-[10px] flex items-center justify-between">
-                <div>
-                    <a href="mailto:AmericanLegalClub@gmail.com">AmericanLegalClub@gmail.com</a>
-                </div>
-            </div>
+      <!-- Navbar -->
+      <div id="follow-section" class="hidden md:block z-10">
+        <div
+          class="text-white bg-primaryBlue w-full px-[50px] py-[10px] flex items-center justify-between"
+        >
+          <div>
+            <a href="mailto:AmericanLegalClub@gmail.com"
+              >AmericanLegalClub@gmail.com</a
+            >
+          </div>
         </div>
-        <div id="logo-section" class="hidden md:block z-10">
-            <div class="px-[50px] py-[20px] w-full flex items-center justify-between">
+      </div>
+      <div id="logo-section" class="hidden md:block z-10">
+        <div
+          class="px-[50px] py-[20px] w-full flex items-center justify-between"
+        >
+          <div>
+            <img
+              src="assets/logo.png"
+              alt="logo"
+              class="w-[150px] object-contain"
+            />
+          </div>
+
+          <div class="flex items-start gap-[50px] mr-[100px]">
+            <div
+              class="flex flex-col items-center gap-[10px] text-center max-w-[150px]"
+            >
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <p>Address: XXXXXXXXX, USA</p>
+            </div>
+
+            <div
+              class="flex flex-col items-center gap-[10px] text-center max-w-[120px]"
+            >
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <p>+01-xxxxxxxx</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="navbar-section" class="sticky top-0 z-10 hidden md:block">
+        <div
+          class="bg-primaryBlue flex items-center justify-center text-white p-[15px]"
+        >
+          <ul class="flex items-center gap-[40px]">
+            <li>
+              <a
+                href="index.html"
+                id="home"
+                class="bg-white p-[10px] rounded-[4px] text-primaryBlue"
+                >Home</a
+              >
+            </li>
+            <li><a href="about.html" id="about">About Us</a></li>
+            <li><a href="services.html" id="services">Services</a></li>
+            <li><a href="workflow.html" id="workflow">Workflow</a></li>
+            <li><a href="contact.html" id="contact">Contact Us</a></li>
+            <li><a href="faq.html" id="faq">FAQs</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- mobile navbar -->
+      <div
+        id="mobileNav-section"
+        class="z-10 max-w-screen flex justify-center md:hidden"
+      >
+        <div class="w-full flex flex-col">
+          <div
+            class="w-full text-white bg-primaryBlue w-full px-[50px] py-[10px] flex items-center justify-between"
+          >
+            <div>
+              <a href="mailto:AmericanLegalClub@gmail.com"
+                >AmericanLegalClub@gmail.com</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="relative p-[20px] w-full flex items-center justify-between"
+          >
+            <div>
+              <img
+                src="assets/logo.png"
+                alt="logo"
+                class="w-[100px] object-contain"
+              />
+            </div>
+
+            <div
+              id="navIcon"
+              class="z-[5] w-[35px] h-[35px] rounded-full flex flex-col gap-[5px] justify-center items-center bg-primaryBlue text-white text-lg"
+            >
+              <div class="w-[20px] h-[2px] bg-white rounded-full"></div>
+              <div class="w-[15px] h-[2px] bg-white rounded-full"></div>
+            </div>
+
+            <!-- mobile nav items -->
+            <div id="navItems" class="hidden">
+              <div
+                id="crossIcon"
+                class="absolute top-[20px] right-[20px] bg-white w-[35px] h-[35px] rounded-full flex items-center justify-center"
+              >
+                <svg
+                  width="25"
+                  height="25"
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="2"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m12 10.93 5.719-5.72c.146-.146.339-.219.531-.219.404 0 .75.324.75.749 0 .193-.073.385-.219.532l-5.72 5.719 5.719 5.719c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.385-.073-.531-.219l-5.719-5.719-5.719 5.719c-.146.146-.339.219-.531.219-.401 0-.75-.323-.75-.75 0-.192.073-.384.22-.531l5.719-5.719-5.72-5.719c-.146-.147-.219-.339-.219-.532 0-.425.346-.749.75-.749.192 0 .385.073.531.219z"
+                  />
+                </svg>
+              </div>
+              <ul
+                class="mt-[50px] w-full p-[20px] font-bold text-white flex flex-col items-center gap-[20px]"
+              >
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="workflow.html">Workflow</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- hero section -->
+      <div id="hero-section">
+        <div class="relative w-full h-[85vh] flex justify-center">
+          <img
+            src="assets/heroImage.jpg"
+            alt="heroImage"
+            class="object-cover w-full h-full absolute top-0 left-0 right-0 bottom-0 z-[-1]"
+          />
+          <div
+            class="w-full md:w-max absolute top-[50%] left-[50%] transform -translate-x-[50%] -translate-y-[50%] bg-primaryRed/10 p-[20px] rounded-[5px]"
+          >
+            <h1
+              class="leading-[1.5] text-center text-xl lg:text-4xl font-[800]"
+            >
+              <span class="text-primaryRed">Secure Your Peace of Mind</span>
+              with Legal Support <br />
+              That Stands Between You and Your
+              <br />
+              Unsecured Creditors
+            </h1>
+          </div>
+
+          <div
+            class="absolute left-[50%] transform -translate-x-[50%] md:-translate-x-[0%] bottom-[70px] md:right-[20px] translate-y-[100%]"
+          >
+            <div
+              class="w-[350px] bg-primaryBlue/75 text-white text-[14px] lg:text-xl font-bold relative p-[20px] rounded-[10px]"
+            >
+              <p>
+                At American Legal Club, we offer unparalleled legal support
+                through a network of seasoned attorneys, all at a
+                pre-negotiated, affordable monthly rate. Get peace of mind
+                today!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full flex flex-col items-center mt-[30px]">
+        <!-- about section -->
+        <div id="about-section">
+          <div
+            class="w-full lg:w-[1000px] bg-lightGray px-[20px] py-[50px] rounded-[5px] flex flex-col text-start"
+          >
+            <div>
+              <div class="w-full md:w-max">
+                <h1 class="text-primaryBlue text-3xl font-[800]">
+                  <span class="text-primaryRed">About</span> American Legal Club
+                </h1>
+                <div
+                  class="w-[170px] h-[2px] rounded-[25px] bg-primaryRed"
+                ></div>
+              </div>
+            </div>
+
+            <div
+              class="w-full flex flex-col md:flex-row items-start justify-between gap-[50px] mt-[70px]"
+            >
+              <div class="w-full md:w-1/2 flex flex-col gap-[30px]">
+                <p>
+                  Are you overwhelmed by debt and afraid of getting sued by your
+                  creditors? American Legal Club specializes in creditor
+                  defense. We provide reliable access to pre-vetted attorneys at
+                  pre-negotiated rates. Our primary focus is ensuring you have
+                  robust legal support should you face legal actions from
+                  unsecured creditors.
+                </p>
+                <p>
+                  American Legal Club was founded to bridge the gap between
+                  legal needs and affordable solutions. Our mission is to
+                  provide a specialized line of defense against unsecured
+                  creditors. Our network of pre- vetted, highly qualified
+                  attorneys is focused on creditor defense to help you navigate
+                  the challenges of legal actions against you.
+                </p>
+
+                <div class="flex flex-col gap-[10px]">
+                  <h1 class="text-2xl font-[700]">Our Mission:</h1>
+                  <p>
+                    Our mission is to revolutionize the way people think about
+                    legal help. We believe that everyone should have the means
+                    to understand and protect their rights, particularly when it
+                    comes to financial wellness and creditor defense.
+                  </p>
+                </div>
+              </div>
+
+              <div class="w-full md:w-1/2">
+                <img
+                  src="assets/heroImage.jpg"
+                  alt="mainImage"
+                  class="w-full h-[500px] object-cover shadow-2xl"
+                />
+              </div>
+            </div>
+
+            <div class="mt-[20px]">
+              <button
+                class="bg-primaryRed text-white px-[15px] py-[6px] rounded-[10px] text-xl"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- service section -->
+        <div id="services-section">
+          <div
+            class="w-full mt-[30px] lg:mt-[-50px] flex flex-col lg:flex-row items-center gap-[20px]"
+          >
+            <div>
+              <button
+                class="bg-primaryBlue p-[10px] rounded-[4px] text-white text-xl"
+              >
+                Explore Services
+              </button>
+            </div>
+
+            <div
+              class="w-full flex flex-col items-center border border-slate-300 shadow-xl rounded-lg p-[5px] lg:p-[20px] bg-white"
+            >
+              <div>
+                <div class="w-max">
+                  <h1 class="text-primaryBlue text-3xl font-[800]">
+                    <span class="text-primaryRed">Our</span> Services
+                  </h1>
+                  <div
+                    class="w-[100px] h-[2px] rounded-[25px] bg-primaryRed"
+                  ></div>
+                </div>
+                <div
+                  class="flex flex-col md:flex-row items-center gap-[20px] lg:gap-[70px] mt-[50px]"
+                >
+                  <div
+                    class="w-[300px] h-[400px] bg-gray1 flex flex-col items-center gap-[20px] rounded-lg p-[20px] shadow-xl"
+                  >
+                    <img
+                      src="assets/law-icon.png"
+                      alt="icon"
+                      class="w-[70px] h-[70px]"
+                    />
+                    <h1 class="text-primaryRed text-xl font-bold">
+                      Specialized Creditor Defense
+                    </h1>
+                    <p>
+                      For a non-refundable monthly fee, secure your robust line
+                      of defense against unsecured creditors. This fee ensures
+                      your access to pre-vetted attorneys who specialize in
+                      creditor defense.
+                    </p>
+                  </div>
+
+                  <div
+                    class="w-[300px] h-[400px] bg-gray1 flex flex-col items-center gap-[20px] rounded-lg p-[20px] shadow-xl"
+                  >
+                    <img
+                      src="assets/person-icon.png"
+                      alt="icon"
+                      class="w-[70px] h-[70px]"
+                    />
+                    <h1 class="text-primaryRed text-xl font-bold">
+                      Pre-Negotiated Rates With Top Lawyers
+                    </h1>
+                    <p>
+                      Our network of attorneys are skilled in creditor defense
+                      and are available at rates you can afford.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Why choose american legal club section -->
+        <div id="whyChoose-section">
+          <div
+            class="z-10 w-full bg-lightGray flex flex-col items-center gap-[20px] p-[30px] rounded-lg mt-[50px]"
+          >
+            <h1 class="text-3xl font-[900] text-center">
+              Why Choose American Legal <br />
+              Club <span class="text-primaryRed">?</span>
+            </h1>
+
+            <div>
+              <div
+                class="flex flex-wrap lg:flex-nowrap justify-center items-center gap-[20px]"
+              >
+                <div class="flex flex-col gap-[30px]">
+                  <div
+                    class="bg-primaryBlue w-[280px] h-[300px] text-white flex flex-col items-center gap-[20px] rounded-lg p-[20px] shadow-xl"
+                  >
+                    <img
+                      src="assets/icon3.png"
+                      alt="icon"
+                      class="w-[70px] h-[70px]"
+                    />
+                    <h1 class="text-primaryRed text-xl font-bold">
+                      Peace of Mind
+                    </h1>
+                    <p>
+                      Legal complexities can be daunting. We provide you with a
+                      safety net of legal experts.
+                    </p>
+                  </div>
+                  <div
+                    class="bg-white w-[280px] h-[300px] flex flex-col items-center gap-[20px] rounded-lg p-[20px] shadow-xl"
+                  >
+                    <img
+                      src="assets/icon4.png"
+                      alt="icon"
+                      class="w-[70px] h-[70px]"
+                    />
+                    <h1 class="text-primaryRed text-xl font-bold">
+                      Cost-Efficiency
+                    </h1>
+                    <p>
+                      Our members enjoy expert legal services at a fraction of
+                      traditional costs.
+                    </p>
+                  </div>
+                </div>
                 <div>
-                    <img src="assets/logo.png" alt="logo" class="w-[150px] object-contain" />
+                  <div
+                    class="bg-lightBlue w-[280px] h-[370px] flex flex-col items-center gap-[20px] rounded-lg p-[20px] shadow-xl"
+                  >
+                    <img
+                      src="assets/icon5.png"
+                      alt="icon"
+                      class="w-[70px] h-[70px]"
+                    />
+                    <h1 class="text-primaryRed text-xl font-bold">
+                      Expert Network
+                    </h1>
+                    <p>
+                      Gain access to a curated network of lawyers who specialize
+                      in creditor defense and financial wellness.
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <div
+                      class="bg-lightOrange w-[280px] h-max lg:h-[640px] text-xl flex flex-col items-center gap-[20px] rounded-lg p-[20px] shadow-xl"
+                    >
+                      <img
+                        src="assets/icon6.png"
+                        alt="icon"
+                        class="w-[70px] h-[70px]"
+                      />
+                      <h1 class="text-primaryRed text-xl font-bold">
+                        What Sets Us Apart ?
+                      </h1>
+                      <p>
+                        Unlike traditional legal firms, we operate on a
+                        subscription-based model, connecting you to our
+                        pre-vetted network of attorneys specializing in creditor
+                        defense and financial wellness.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- footer -->
+        <div id="footer-section" class="w-full mt-[-40px]">
+          <div
+            class="w-full flex flex-col items-center gap-[30px] bg-primaryBlue pt-[120px] pb-[100px]"
+          >
+            <div
+              class="w-full lg:w-[90%] flex items-center justify-center md:gap-[20px] text-white p-[10px] md:px-[40px]"
+            >
+              <div class="hidden md:block">
+                <img
+                  src="assets/logo.png"
+                  alt="logo"
+                  class="w-[170px] h-[170px] object-contain"
+                />
+              </div>
+
+              <div class="grow flex flex-col items-center gap-[30px]">
+                <div class="flex flex-col items-center gap-[10px]">
+                  <h1 class="text-xl font-bold">Subscribe to our newsletter</h1>
+                  <div
+                    class="bg-white flex items-center overflow-hidden rounded-[25px]"
+                  >
+                    <div class="flex items-center gap-[5px] px-[10px]">
+                      <i class="fa-regular fa-envelope"></i>
+                      <input
+                        type="email"
+                        placeholder="input your email"
+                        class="bg-transparent"
+                      />
+                    </div>
+                    <button
+                      class="bg-primaryRed text-lg text-white py-[6px] px-[15px] rounded-r-[25px]"
+                    >
+                      Subscribe
+                    </button>
+                  </div>
                 </div>
 
-                <div class="flex items-start gap-[50px] mr-[100px]">
-                    <div class="flex flex-col items-center gap-[10px] text-center max-w-[150px]">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        <p>Address: XXXXXXXXX, USA</p>
-                    </div>
-
-                    <div class="flex flex-col items-center gap-[10px] text-center max-w-[120px]">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
-                        <p>+01-xxxxxxxx</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="navbar-section" class="sticky top-0 z-10 hidden md:block">
-            <div class='bg-primaryBlue flex items-center justify-center text-white p-[15px]'>
-                <ul class='flex items-center gap-[40px]'>
-                    <li><a href="index.html" id="home" class="bg-white p-[10px] rounded-[4px] text-primaryBlue">Home</a></li>
-                    <li><a href="about.html" id="about">About Us</a></li>
-                    <li><a href="services.html" id="services">Services</a></li>
-                    <li><a href="workflow.html" id="workflow">Workflow</a></li>
-                    <li><a href="contact.html" id="contact">Contact Us</a></li>
-                    <li><a href="faq.html" id="faq">FAQs</a></li>
+                <ul
+                  class="flex items-center justify-center flex-wrap lg:flex-nowrap gap-[30px]"
+                >
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Terms &amp; Conditions</a></li>
+                  <li><a href="#">TCPA Consent</a></li>
                 </ul>
+              </div>
             </div>
+            <div class="w-[90%] h-[2px] rounded-[25px] bg-white"></div>
+
+            <div
+              class="w-full lg:w-[85%] flex items-center justify-center lg:justify-between text-white px-[50px] mt-[30px]"
+            >
+              <div class="flex items-center opacity-75">
+                <p>${copyRightText}</p>
+                <ul class="flex items-center gap-[20px] ml-[30px]">
+                  <li class="flex items-center"><BsDot /> Privacy</li>
+                  <li class="flex items-center"><BsDot />Terms</li>
+                  <li class="flex items-center"><BsDot />Sitemap</li>
+                </ul>
+              </div>
+
+              <div class="flex items-center gap-[20px] text-2xl"></div>
+            </div>
+          </div>
         </div>
-        <!-- mobile navbar -->
-        <div id="mobileNav-section" class="z-10 max-w-screen flex justify-center md:hidden">
-            <div class="w-full flex flex-col">
-                <div
-                    class="w-full text-white bg-primaryBlue w-full px-[50px] py-[10px] flex items-center justify-between">
-                    <div>
-                        <a href="mailto:AmericanLegalClub@gmail.com">AmericanLegalClub@gmail.com</a>
-                    </div>
-                </div>
-
-                <div class="relative p-[20px] w-full flex items-center justify-between">
-                    <div>
-                        <img src="assets/logo.png" alt="logo" class="w-[100px] object-contain" />
-                    </div>
-
-                    <div id="navIcon"
-                        class="z-[5] w-[35px] h-[35px] rounded-full flex flex-col gap-[5px] justify-center items-center bg-primaryBlue text-white text-lg">
-                        <div class="w-[20px] h-[2px] bg-white rounded-full "></div>
-                        <div class="w-[15px] h-[2px] bg-white rounded-full "></div>
-                    </div>
-
-                    <!-- mobile nav items -->
-                    <div id="navItems" class="hidden">
-                        <div id="crossIcon" class="absolute top-[20px] right-[20px] bg-white w-[35px] h-[35px] rounded-full flex items-center justify-center">
-                            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-                        </div>
-                        <ul class='mt-[50px] w-full p-[20px] font-bold text-white flex flex-col items-center gap-[20px]'>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="workflow.html">Workflow</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
-                            <li><a href="faq.html">FAQs</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- hero section -->
-        <div id="hero-section">
-            <div class="relative w-full h-[85vh] flex justify-center">
-                <img src="assets/heroImage.jpg" alt="heroImage"
-                    class="object-cover w-full h-full absolute top-0 left-0 right-0 bottom-0 z-[-1]" />
-                <div
-                    class="w-full md:w-max absolute top-[50%] left-[50%] transform -translate-x-[50%] -translate-y-[50%] bg-primaryRed/10 p-[20px] rounded-[5px]">
-                    <h1 class="leading-[1.5] text-center text-xl lg:text-4xl font-[800]">
-                        <span class="text-primaryRed">Secure Your Peace of Mind</span>
-                        with Legal Support <br />
-                        That Stands Between You and Your
-                        <br /> Unsecured Creditors
-                    </h1>
-                </div>
-
-                <div
-                    class="absolute left-[50%] transform -translate-x-[50%] md:-translate-x-[0%] bottom-[70px] md:right-[20px] translate-y-[100%]">
-                    <div
-                        class="w-[350px] bg-primaryBlue/75 text-white text-[14px] lg:text-xl font-bold relative p-[20px] rounded-[10px]">
-                        <p>
-                            At American Legal Club, we offer unparalleled legal support through a network of seasoned
-                            attorneys, all at a pre-negotiated, affordable monthly rate. Get peace of mind today!
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="w-full flex flex-col items-center mt-[30px]">
-            <!-- about section -->
-            <div id="about-section">
-                <div
-                    class="w-full lg:w-[1000px] bg-lightGray px-[20px] py-[50px] rounded-[5px] flex flex-col text-start">
-                    <div>
-                        <div class='w-full md:w-max'>
-                            <h1 class="text-primaryBlue text-3xl font-[800]">
-                                <span class="text-primaryRed">About</span> American Legal Club
-                            </h1>
-                            <div class="w-[170px] h-[2px] rounded-[25px] bg-primaryRed"></div>
-                        </div>
-                    </div>
-
-                    <div class="w-full flex flex-col md:flex-row items-start justify-between gap-[50px] mt-[70px]">
-                        <div class="w-full md:w-1/2 flex flex-col gap-[30px]">
-                            <p>Are you overwhelmed by debt and afraid of getting sued by your creditors? American Legal
-                                Club
-                                specializes in creditor defense. We provide reliable access to pre-vetted attorneys at
-                                pre-negotiated
-                                rates. Our primary focus is ensuring you have robust legal support should you face legal
-                                actions from
-                                unsecured creditors.</p>
-                            <p>American Legal Club was founded to bridge the gap between legal needs and affordable
-                                solutions. Our
-                                mission is to provide a specialized line of defense against unsecured creditors. Our
-                                network of pre-
-                                vetted, highly qualified attorneys is focused on creditor defense to help you navigate
-                                the challenges of
-                                legal actions against you.
-                            </p>
-
-                            <div class="flex flex-col gap-[10px]">
-                                <h1 class="text-2xl font-[700]">Our Mission:</h1>
-                                <p>Our mission is to revolutionize the way people think about legal help. We believe
-                                    that everyone should
-                                    have the means to understand and protect their rights, particularly when it comes to
-                                    financial wellness
-                                    and creditor defense.</p>
-                            </div>
-                        </div>
-
-                        <div class="w-full md:w-1/2">
-                            <img src="assets/heroImage.jpg" alt="mainImage"
-                                class="w-full h-[500px] object-cover shadow-2xl" />
-                        </div>
-                    </div>
-
-                    <div class="mt-[20px]">
-                        <button class="bg-primaryRed text-white px-[15px] py-[6px] rounded-[10px] text-xl">
-                            Learn More
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- service section -->
-            <div id="services-section">
-                <div class="w-full mt-[30px] lg:mt-[-50px] flex flex-col lg:flex-row items-center gap-[20px]">
-                    <div>
-                        <button class="bg-primaryBlue p-[10px] rounded-[4px] text-white text-xl">
-                            Explore Services
-                        </button>
-                    </div>
-
-                    <div
-                        class="w-full flex flex-col items-center border border-slate-300 shadow-xl rounded-lg p-[5px] lg:p-[20px] bg-white">
-                        <div>
-                            <div class='w-max'>
-                                <h1 class="text-primaryBlue text-3xl font-[800]">
-                                    <span class="text-primaryRed">Our</span> Services
-                                </h1>
-                                <div class="w-[100px] h-[2px] rounded-[25px] bg-primaryRed"></div>
-                            </div>
-                            <div class="flex flex-col md:flex-row items-center gap-[20px] lg:gap-[70px] mt-[50px]">
-                                <div
-                                    class="w-[300px] h-[400px] bg-gray1 flex flex-col items-center gap-[20px] rounded-lg p-[20px] shadow-xl">
-                                    <img src="assets/law-icon.png" alt="icon" class="w-[70px] h-[70px]" />
-                                    <h1 class="text-primaryRed text-xl font-bold">Specialized Creditor Defense</h1>
-                                    <p>For a non-refundable monthly fee, secure your robust line of defense against
-                                        unsecured creditors. This fee ensures your access to pre-vetted attorneys who
-                                        specialize in creditor defense.</p>
-                                </div>
-
-                                <div
-                                    class="w-[300px] h-[400px] bg-gray1 flex flex-col items-center gap-[20px] rounded-lg p-[20px] shadow-xl">
-                                    <img src="assets/person-icon.png" alt="icon" class="w-[70px] h-[70px]" />
-                                    <h1 class="text-primaryRed text-xl font-bold">Pre-Negotiated Rates With Top Lawyers
-                                    </h1>
-                                    <p>Our network of attorneys are skilled in creditor defense and are available at
-                                        rates you can afford.</p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Why choose american legal club section -->
-            <div id="whyChoose-section">
-                <div
-                    class="z-10 w-full bg-lightGray flex flex-col items-center gap-[20px] p-[30px] rounded-lg mt-[50px]">
-                    <h1 class="text-3xl font-[900] text-center">
-                        Why Choose American Legal <br />
-                        Club <span class="text-primaryRed">?</span>
-                    </h1>
-
-                    <div>
-                        <div class="flex flex-wrap lg:flex-nowrap justify-center items-center gap-[20px]">
-                            <div class="flex flex-col gap-[30px]">
-                                <div
-                                    class="bg-primaryBlue w-[280px] h-[300px] text-white flex flex-col items-center gap-[20px] rounded-lg p-[20px] shadow-xl">
-                                    <img src="assets/icon3.png" alt="icon" class="w-[70px] h-[70px]" />
-                                    <h1 class="text-primaryRed text-xl font-bold">Peace of Mind</h1>
-                                    <p>Legal complexities can be daunting. We provide you with a safety net of legal
-                                        experts.</p>
-                                </div>
-                                <div
-                                    class="bg-white w-[280px] h-[300px] flex flex-col items-center gap-[20px] rounded-lg p-[20px] shadow-xl">
-                                    <img src="assets/icon4.png" alt="icon" class="w-[70px] h-[70px]" />
-                                    <h1 class="text-primaryRed text-xl font-bold">Cost-Efficiency</h1>
-                                    <p>Our members enjoy expert legal services at a fraction of traditional costs.
-                                    </p>
-                                </div>
-                            </div>
-                            <div>
-                                <div
-                                    class="bg-lightBlue w-[280px] h-[370px] flex flex-col items-center gap-[20px] rounded-lg p-[20px] shadow-xl">
-                                    <img src="assets/icon5.png" alt="icon" class="w-[70px] h-[70px]" />
-                                    <h1 class="text-primaryRed text-xl font-bold">Expert Network</h1>
-                                    <p>Gain access to a curated network of lawyers who specialize in creditor
-                                        defense and financial wellness.</p>
-                                </div>
-                            </div>
-                            <div>
-                                <div>
-                                    <div
-                                        class="bg-lightOrange w-[280px] h-max lg:h-[640px] text-xl flex flex-col items-center gap-[20px] rounded-lg p-[20px] shadow-xl">
-                                        <img src="assets/icon6.png" alt="icon" class="w-[70px] h-[70px]" />
-                                        <h1 class="text-primaryRed text-xl font-bold">What Sets Us Apart ?</h1>
-                                        <p>Unlike traditional legal firms, we operate on a subscription-based model,
-                                            connecting you to our pre-vetted network of attorneys specializing in
-                                            creditor defense and financial wellness.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- footer -->
-            <div id="footer-section" class="w-full mt-[-40px]">
-                <div class='w-full flex flex-col items-center gap-[30px] bg-primaryBlue pt-[120px] pb-[100px]'>
-                    <div
-                        class="w-full lg:w-[90%] flex items-center justify-center md:gap-[20px] text-white p-[10px] md:px-[40px]">
-                        <div class="hidden md:block">
-                            <img src="assets/logo.png" alt="logo" class="w-[170px] h-[170px] object-contain " />
-                        </div>
-
-                        <div class="grow flex flex-col items-center gap-[30px]">
-                            <div class="flex flex-col items-center gap-[10px]">
-                                <h1 class="text-xl font-bold">Subscribe to our newsletter</h1>
-                                <div class="bg-white flex items-center overflow-hidden rounded-[25px]">
-                                    <div class="flex items-center gap-[5px] px-[10px]">
-                                        <i class="fa-regular fa-envelope"></i>
-                                        <input type="email" placeholder="input your email" class="bg-transparent" />
-                                    </div>
-                                    <button
-                                        class="bg-primaryRed text-lg text-white py-[6px] px-[15px] rounded-r-[25px]">
-                                        Subscribe
-                                    </button>
-                                </div>
-                            </div>
-
-                            <ul class="flex items-center justify-center flex-wrap lg:flex-nowrap gap-[30px]">
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Terms &amp; Conditions</a></li>
-                                <li><a href="#">TCPA Consent</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class='w-[90%] h-[2px] rounded-[25px] bg-white '></div>
-
-                    <div
-                        class="w-full lg:w-[85%] flex items-center justify-center lg:justify-between text-white px-[50px] mt-[30px]">
-                        <div class="flex items-center opacity-75">
-                            <p>${copyRightText}</p>
-                            <ul class="flex items-center gap-[20px] ml-[30px]">
-                                <li class="flex items-center">
-                                    <BsDot /> Privacy
-                                </li>
-                                <li class="flex items-center">
-                                    <BsDot />Terms
-                                </li>
-                                <li class="flex items-center">
-                                    <BsDot />Sitemap
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="flex items-center gap-[20px] text-2xl">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
 
     <script>
-        const showNavButton = document.getElementById('navIcon');
-        const navItems = document.getElementById('navItems');
-        const overlay = document.getElementById('overlay');
-        const crossIcon = document.getElementById('crossIcon');
+      const showNavButton = document.getElementById("navIcon");
+      const navItems = document.getElementById("navItems");
+      const overlay = document.getElementById("overlay");
+      const crossIcon = document.getElementById("crossIcon");
 
-        showNavButton.addEventListener('click', () => {
-            navItems.classList.toggle('hidden');
-            overlay.classList.toggle('hideOverlay');
-        });
+      showNavButton.addEventListener("click", () => {
+        navItems.classList.toggle("hidden");
+        overlay.classList.toggle("hideOverlay");
+      });
 
-        crossIcon.addEventListener('click', () => {
-            navItems.classList.add('hidden');
-            overlay.classList.add('hideOverlay');
-        });
+      crossIcon.addEventListener("click", () => {
+        navItems.classList.add("hidden");
+        overlay.classList.add("hideOverlay");
+      });
     </script>
-</body>
-
+  </body>
 </html>

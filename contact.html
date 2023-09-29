@@ -29,6 +29,8 @@
     </script>
   </head>
   <body>
+    <!-- overlay -->
+    <div id="overlay" class="hideOverlay"></div>
     <header>
       <nav>
         <!-- Navbar -->
@@ -76,14 +78,21 @@
           <div
             class="bg-primaryBlue flex items-center justify-center text-white p-[15px]"
           >
-          <ul class='flex items-center gap-[40px]'>
-            <li><a href="index.html" id="home">Home</a></li>
-            <li><a href="about.html" id="about">About Us</a></li>
-            <li><a href="services.html" id="services">Services</a></li>
-            <li><a href="workflow.html" id="workflow">Workflow</a></li>
-            <li><a href="contact.html" id="contact" class="bg-white p-[10px] rounded-[4px] text-primaryBlue">Contact Us</a></li>
-            <li><a href="faq.html" id="faq">FAQs</a></li>
-        </ul>
+            <ul class="flex items-center gap-[40px]">
+              <li><a href="index.html" id="home">Home</a></li>
+              <li><a href="about.html" id="about">About Us</a></li>
+              <li><a href="services.html" id="services">Services</a></li>
+              <li><a href="workflow.html" id="workflow">Workflow</a></li>
+              <li>
+                <a
+                  href="contact.html"
+                  id="contact"
+                  class="bg-white p-[10px] rounded-[4px] text-primaryBlue"
+                  >Contact Us</a
+                >
+              </li>
+              <li><a href="faq.html" id="faq">FAQs</a></li>
+            </ul>
           </div>
         </div>
         <!-- mobile navbar -->
@@ -127,7 +136,20 @@
                   id="crossIcon"
                   class="absolute top-[20px] right-[20px] bg-white w-[35px] h-[35px] rounded-full flex items-center justify-center"
                 >
-                  <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                  <svg
+                    width="25"
+                    height="25"
+                    clip-rule="evenodd"
+                    fill-rule="evenodd"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="m12 10.93 5.719-5.72c.146-.146.339-.219.531-.219.404 0 .75.324.75.749 0 .193-.073.385-.219.532l-5.72 5.719 5.719 5.719c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.385-.073-.531-.219l-5.719-5.719-5.719 5.719c-.146.146-.339.219-.531.219-.401 0-.75-.323-.75-.75 0-.192.073-.384.22-.531l5.719-5.719-5.72-5.719c-.146-.147-.219-.339-.219-.532 0-.425.346-.749.75-.749.192 0 .385.073.531.219z"
+                    />
+                  </svg>
                 </div>
                 <ul
                   class="mt-[50px] w-full p-[20px] font-bold text-white flex flex-col items-center gap-[20px]"
@@ -197,7 +219,9 @@
       <div class="mt-[40px]">
         <h1 class="text-center text-2xl font-bold">Get in touch anytime</h1>
 
-        <div class=" mt-[40px] w-full flex justify-center items-center flex-wrap gap-[20px]">
+        <div
+          class="mt-[40px] w-full flex justify-center items-center flex-wrap gap-[20px]"
+        >
           <div class="w-[250px] flex flex-col gap-[10px]">
             <h1 class="font-bold">Email</h1>
             <p class="pl-[10px]">AmericanLegalClub@gmail.com</p>
@@ -292,5 +316,22 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      const showNavButton = document.getElementById("navIcon");
+      const navItems = document.getElementById("navItems");
+      const overlay = document.getElementById("overlay");
+      const crossIcon = document.getElementById("crossIcon");
+
+      showNavButton.addEventListener("click", () => {
+        navItems.classList.toggle("hidden");
+        overlay.classList.toggle("hideOverlay");
+      });
+
+      crossIcon.addEventListener("click", () => {
+        navItems.classList.add("hidden");
+        overlay.classList.add("hideOverlay");
+      });
+    </script>
   </body>
 </html>
