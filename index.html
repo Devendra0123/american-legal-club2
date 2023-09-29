@@ -277,11 +277,11 @@
           <div
             class="w-full mt-[30px] lg:mt-[-50px] flex flex-col lg:flex-row items-center gap-[20px]"
           >
-            <div>
+            <div class="hidden lg:block">
               <button
                 class="bg-primaryBlue p-[10px] rounded-[4px] text-white text-xl"
               >
-                Explore Services
+               <a href="services.html">Explore Services</a> 
               </button>
             </div>
 
@@ -297,6 +297,15 @@
                     class="w-[100px] h-[2px] rounded-[25px] bg-primaryRed"
                   ></div>
                 </div>
+
+                <div class="mt-[20px] lg:hidden">
+                  <button
+                    class="bg-primaryBlue p-[10px] rounded-[4px] text-white text-xl"
+                  >
+                   <a href="services.html">Explore Services</a> 
+                  </button>
+                </div>
+
                 <div
                   class="flex flex-col md:flex-row items-center gap-[20px] lg:gap-[70px] mt-[50px]"
                 >
@@ -342,9 +351,9 @@
         </div>
 
         <!-- Why choose american legal club section -->
-        <div id="whyChoose-section">
+        <div id="whyChoose-section" style="z-index: 10;">
           <div
-            class="z-10 w-full bg-lightGray flex flex-col items-center gap-[20px] p-[30px] rounded-lg mt-[50px]"
+            class="w-full bg-lightGray flex flex-col items-center gap-[20px] p-[30px] rounded-lg mt-[50px]"
           >
             <h1 class="text-3xl font-[900] text-center">
               Why Choose American Legal <br />
@@ -435,7 +444,7 @@
         </div>
 
         <!-- footer -->
-        <div id="footer-section" class="w-full mt-[-40px]">
+        <div id="footer-section" style="z-index: 5;" class="mt-[-40px] w-full">
           <div
             class="w-full flex flex-col items-center gap-[30px] bg-primaryBlue pt-[120px] pb-[100px]"
           >
