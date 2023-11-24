@@ -32,7 +32,7 @@
   <div id="overlay" class="hideOverlay"></div>
   <div className="w-full flex flex-col items-center">
     <!-- Navbar -->
-    <div id="follow-section" class="hidden md:block z-10">
+    <!-- <div id="follow-section" class="hidden md:block z-10">
       <div class="text-white bg-primaryBlue w-full px-[50px] py-[10px] flex items-center justify-between">
         <div>
           <a href="mailto:AmericanLegalClub@gmail.com">AmericanLegalClub@gmail.com</a>
@@ -78,51 +78,54 @@
           </ul>
         </div>
       </div>
-    </div>
-    <div id="logo-section" class="hidden md:block z-10">
-      <div class="px-[50px] py-[20px] w-full flex items-center justify-between">
+    </div> -->
+    <div id="logo-section"
+      class="z-10 hidden bg-white/75 w-full fixed top-0 md:flex items-center justify-between z-10 px-[50px] py-[20px] ">
+      <div class="flex items-center gap-[20px]">
         <div>
-          <img src="assets/logo.png" alt="logo" class="w-[150px] object-contain" />
+          <img src="assets/logo.png" alt="logo" class="w-[100px] object-contain" />
         </div>
 
         <div class="flex items-start gap-[50px] mr-[100px]">
           <div class="flex flex-col items-center gap-[10px] text-center max-w-[150px]">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="#f70100" width="24" height="24" viewBox="0 0 24 24">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#3c90d1" width="20" height="20" viewBox="0 0 24 24">
               <path
                 d="M12 0c-4.198 0-8 3.403-8 7.602 0 6.243 6.377 6.903 8 16.398 1.623-9.495 8-10.155 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.342-3 3-3 3 1.343 3 3-1.343 3-3 3z" />
             </svg>
-            <p>Address: 1234 road st, MD, 20157</p>
+            <p class="text-[13px]">Address: 1234 road st, MD, 20157</p>
           </div>
 
           <div class="flex flex-col items-center gap-[10px] text-center max-w-[120px]">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="#3c90d1" width="24" height="24" viewBox="0 0 24 24">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#3c90d1" width="20" height="20" viewBox="0 0 24 24">
               <path
                 d="M14.89 23.654c-7.367 3.367-18.802-18.86-11.601-22.615l2.107-1.039 3.492 6.817-2.082 1.026c-2.189 1.174 2.37 10.08 4.609 8.994.091-.041 2.057-1.007 2.064-1.011l3.521 6.795c-.008.004-1.989.978-2.11 1.033zm-1.538-13.409l2.917.87c.223-.747.16-1.579-.24-2.317-.399-.739-1.062-1.247-1.808-1.469l-.869 2.916zm1.804-6.058c1.551.462 2.926 1.516 3.756 3.051.831 1.536.96 3.263.498 4.813l-1.795-.535c.325-1.091.233-2.306-.352-3.387-.583-1.081-1.551-1.822-2.643-2.146l.536-1.796zm.95-3.187c2.365.705 4.463 2.312 5.729 4.656 1.269 2.343 1.466 4.978.761 7.344l-1.84-.548c.564-1.895.406-4.006-.608-5.882-1.016-1.877-2.696-3.165-4.591-3.729l.549-1.841z" />
             </svg>
-            <p>800-123-4567</p>
+            <p class="text-[13px]">800-123-4567</p>
           </div>
         </div>
       </div>
-    </div>
-    <div id="navbar-section" class="sticky top-0 z-10 hidden md:block">
-      <div class="bg-primaryBlue flex items-center justify-center text-white p-[15px]">
-        <ul class="flex items-center gap-[40px]">
-          <li>
-            <a href="index.html" id="home" class="bg-white p-[10px] rounded-[4px] text-primaryBlue">Home</a>
-          </li>
-          <li><a href="about.html" id="about"
-              class="hover:bg-white p-[10px] hover:rounded-[4px] hover:text-primaryBlue">About Us</a></li>
-          <li><a href="services.html" id="services"
-              class="hover:bg-white p-[10px] hover:rounded-[4px] hover:text-primaryBlue">Services</a></li>
-          <li><a href="workflow.html" id="workflow"
-              class="hover:bg-white p-[10px] hover:rounded-[4px] hover:text-primaryBlue">Workflow</a></li>
-          <li><a href="contact.html" id="contact"
-              class="hover:bg-white p-[10px] hover:rounded-[4px] hover:text-primaryBlue">Contact Us</a></li>
-          <li><a href="faq.html" id="faq"
-              class="hover:bg-white p-[10px] hover:rounded-[4px] hover:text-primaryBlue">FAQs</a></li>
-        </ul>
+
+      <div id="navbar-section" class="">
+        <div class=" flex items-center justify-center text-center">
+          <ul class="flex items-center gap-[20px] font-semibold">
+            <li>
+              <a href="index.html" id="home" class="bg-white p-[10px] rounded-[4px] text-primaryBlue">Home</a>
+            </li>
+            <li><a href="about.html" id="about"
+                class="hover:bg-white p-[10px] hover:rounded-[4px] hover:text-primaryBlue">About Us</a></li>
+            <li><a href="services.html" id="services"
+                class="hover:bg-white p-[10px] hover:rounded-[4px] hover:text-primaryBlue">Services</a></li>
+            <li><a href="workflow.html" id="workflow"
+                class="hover:bg-white p-[10px] hover:rounded-[4px] hover:text-primaryBlue">Workflow</a></li>
+            <li><a href="contact.html" id="contact"
+                class="hover:bg-white p-[10px] hover:rounded-[4px] hover:text-primaryBlue">Contact Us</a></li>
+            <li><a href="faq.html" id="faq"
+                class="hover:bg-white p-[10px] hover:rounded-[4px] hover:text-primaryBlue">FAQs</a></li>
+          </ul>
+        </div>
       </div>
     </div>
+
     <!-- mobile navbar -->
     <div id="mobileNav-section" class="z-10 max-w-screen flex justify-center md:hidden">
       <div class="w-full flex flex-col">
@@ -168,24 +171,36 @@
 
     <!-- hero section -->
     <div id="hero-section">
-      <div class="relative w-full h-[85vh] flex justify-center">
+      <div class="relative w-full h-[100vh] flex justify-center">
         <img src="assets/heroImage.jpg" alt="heroImage"
           class="object-cover w-full h-full absolute top-0 left-0 right-0 bottom-0 z-[-1]" />
-        <div
-          class="w-full md:w-max absolute top-[70%] left-[50%] transform -translate-x-[50%] -translate-y-[50%] bg-red-300/40 p-[20px] rounded-[5px]">
-          <h1 class="leading-[1.5] text-center text-xl lg:text-4xl font-[800]">
-            <span class="text-primaryRed">Secure Your Peace of Mind</span>
-            with Legal Support <br />
-            That Stands Between You and Your
-            <br />
-            Unsecured Creditors
-          </h1>
-        </div>
 
         <div
-          class="absolute left-[50%] md:left-[70%] transform -translate-x-[50%] translate-y-[100%] bottom-[70px] md:translate-x-[0%] md:right-[20px]">
-          <div
-            class="w-[350px] bg-primaryBlue/75 text-white text-[14px] lg:text-lg font-bold relative p-[20px] rounded-[10px]">
+          class="z-[5] w-full md:w-[600px] flex flex-col gap-[20px] absolute top-[60%] left-[10%] transform -translate-y-[50%] p-[20px] rounded-[5px]">
+          <h1 class="leading-[1.5] text-start text-2xl lg:text-4xl text-slate-900 font-[800]">
+            <span class="text-primaryRed">Secure</span> Your Peace of Mind
+            <span class="underline underline-offset-8 decoration-primaryBlue">with Legal Support</span>
+            That Stands Between You and Your
+            Unsecured Creditors.
+          </h1>
+          <a href="contact.html">
+            <button class="bg-primaryBlue text-white px-[20px] py-[8px] rounded-[4px] text-lg">Contact Us</button>
+          </a>
+        </div>
+
+        <!-- Overlay -->
+        <div class="z-0 w-full h-full absolute top-0 left-0 bg-gradient-to-r from-white/75 to-transparent">
+
+        </div>
+        <div
+          class="absolute left-[50%] md:left-[70%] transform -translate-x-[50%] translate-y-[100%] lg:top-[60%] lg:-translate-y-[50%] bottom-[70px] md:translate-x-[0%] md:right-[20px]">
+          <div class="w-[300px] bg-white/75 text-[14px] lg:text-lg font-semibold relative p-[20px] rounded-[10px] shadow-lg shadow-slate-500">
+            <svg fill="#3c90d1" width="24" height="24" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
+              viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="m21.301 4c.411 0 .699.313.699.663 0 .248-.145.515-.497.702-1.788.948-3.858 4.226-3.858 6.248 3.016-.092 4.326 2.582 4.326 4.258 0 2.007-1.738 4.129-4.308 4.129-3.24 0-4.83-2.547-4.83-5.307 0-5.98 6.834-10.693 8.468-10.693zm-10.833 0c.41 0 .699.313.699.663 0 .248-.145.515-.497.702-1.788.948-3.858 4.226-3.858 6.248 3.016-.092 4.326 2.582 4.326 4.258 0 2.007-1.739 4.129-4.308 4.129-3.241 0-4.83-2.547-4.83-5.307 0-5.98 6.833-10.693 8.468-10.693z"
+                fill-rule="nonzero" />
+            </svg>
             <p>
               At American Legal Club, we offer unparalleled legal support
               through a network of seasoned attorneys, all at a
@@ -197,22 +212,22 @@
       </div>
     </div>
 
-    <div class="w-full flex flex-col items-center mt-[30px]">
+    <div class="w-full bg-lightGray flex flex-col items-center mt-[30px] lg:mt-0">
       <!-- about section -->
-      <div id="about-section">
-        <div class="w-full lg:w-[1000px] bg-lightGray px-[20px] py-[50px] rounded-[5px] flex flex-col text-start">
+      <div id="about-section" class="w-full flex flex-col items-center">
+        <div class="w-full lg:w-[1000px] text-center px-[20px] py-[50px] rounded-[5px] flex flex-col items-center text-center">
           <div>
-            <div class="w-full md:w-max">
-              <h1 class="text-primaryBlue text-3xl font-[800]">
+            <div class="w-full">
+              <h1 class="w-full text-primaryBlue text-3xl font-[800]">
                 <span class="text-primaryRed">About</span> American Legal Club
               </h1>
               <div class="w-[170px] h-[2px] rounded-[25px] bg-primaryRed"></div>
             </div>
           </div>
 
-          <div class="w-full flex flex-col md:flex-row items-start justify-between gap-[50px] mt-[70px]">
-            <div class="w-full md:w-1/2 flex flex-col gap-[30px]">
-              <p>
+          <div class="w-full flex flex-col md:flex-row items-start justify-between gap-[50px] mt-[30px]">
+            <div class="w-full flex flex-col lg:flex-row items-center gap-[20px] justify-between gap-[30px] text-xl text-start">
+              <p class="w-[45%] ">
                 Are you overwhelmed by debt and afraid of getting sued by your
                 creditors? American Legal Club specializes in creditor
                 defense. We provide reliable access to pre-vetted attorneys at
@@ -220,16 +235,7 @@
                 robust legal support should you face legal actions from
                 unsecured creditors.
               </p>
-              <p>
-                American Legal Club was founded to bridge the gap between
-                legal needs and affordable solutions. Our mission is to
-                provide a specialized line of defense against unsecured
-                creditors. Our network of pre- vetted, highly qualified
-                attorneys is focused on creditor defense to help you navigate
-                the challenges of legal actions against you.
-              </p>
-
-              <div class="flex flex-col gap-[10px]">
+              <div class="w-[45%] flex flex-col gap-[10px] bg-slate-300 p-[20px] rounded-[10px]">
                 <h1 class="text-2xl font-[700]">Our Mission:</h1>
                 <p>
                   Our mission is to revolutionize the way people think about
@@ -237,34 +243,30 @@
                   to understand and protect their rights, particularly when it
                   comes to financial wellness and creditor defense.
                 </p>
+
+                <div class="mt-[20px]">
+                  <button class="bg-primaryBlue text-white px-[15px] py-[6px] rounded-[10px] text-xl">
+                    Learn More
+                  </button>
+                </div>
               </div>
-            </div>
+              </div>
 
-            <div class="w-full md:w-1/2">
-              <img src="assets/heroImage.jpg" alt="mainImage" class="w-full h-[500px] object-cover shadow-2xl" />
-            </div>
-          </div>
-
-          <div class="mt-[20px]">
-            <button class="bg-primaryRed text-white px-[15px] py-[6px] rounded-[10px] text-xl">
-              Learn More
-            </button>
-          </div>
         </div>
       </div>
 
       <!-- service section -->
       <div id="services-section">
         <div class="w-full mt-[30px] lg:mt-[-50px] flex flex-col lg:flex-row items-center gap-[20px]">
-          <div class="hidden lg:block">
+          <!-- <div class="hidden lg:block">
             <button class="shadow-2xl whitespace-nowrap bg-primaryBlue p-[10px] rounded-[4px] text-white text-xl">
               <a href="services.html">Explore Services</a>
             </button>
-          </div>
+          </div> -->
 
           <div
-            class="w-full flex flex-col items-center border border-slate-300 shadow-xl rounded-lg p-[5px] lg:p-[20px] bg-white">
-            <div>
+            class="w-full flex flex-col items-center p-[5px] lg:p-[20px] mt-[50px]">
+            <div class="flex flex-col items-center">
               <div class="w-max">
                 <h1 class="text-primaryBlue text-3xl font-[800]">
                   <span class="text-primaryRed">Our</span> Services
@@ -278,11 +280,11 @@
                 </button>
               </div>
 
-              <div class="flex flex-col md:flex-row items-center gap-[20px] lg:gap-[70px] mt-[50px]">
+              <div class="flex flex-col md:flex-row items-center justify-center gap-[20px] lg:gap-[70px] mt-[50px]">
                 <div
-                  class="w-[300px] h-[400px] bg-gray1 flex flex-col items-center gap-[20px] rounded-lg p-[20px] shadow-xl">
+                  class="w-[40%] h-[300px] bg-primaryBlue/25 flex flex-col justify-center items-center gap-[20px] rounded-lg p-[20px] shadow-xl">
                   <img src="assets/law-icon.png" alt="icon" class="w-[70px] h-[70px]" />
-                  <h1 class="text-primaryRed text-xl font-bold">
+                  <h1 class="text-primaryRed text-xl font-bold text-center">
                     Specialized Creditor Defense
                   </h1>
                   <p>
@@ -294,9 +296,9 @@
                 </div>
 
                 <div
-                  class="w-[300px] h-[400px] bg-gray1 flex flex-col items-center gap-[20px] rounded-lg p-[20px] shadow-xl">
+                  class="w-[40%] h-[300px] bg-primaryBlue/25 flex flex-col justify-center items-center gap-[20px] rounded-lg p-[20px] shadow-xl">
                   <img src="assets/person-icon.png" alt="icon" class="w-[70px] h-[70px]" />
-                  <h1 class="text-primaryRed text-xl font-bold">
+                  <h1 class="text-primaryRed text-xl font-bold text-center">
                     Pre-Negotiated Rates With Top Lawyers
                   </h1>
                   <p>
