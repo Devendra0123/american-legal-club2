@@ -1,55 +1,129 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: Montserrat;
+body {
+  font-family: Montserrat;
 }
 .hidden {
-    display: none;
+  display: none;
 }
 
 /* Show the navItems when #navItems is the target */
 #navItems {
-    width: 85%;
-    height: 100vh;
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    background-color: #2f87ce;
-    z-index: 10;
+  width: 85%;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  background-color: #2f87ce;
+  z-index: 10;
 }
 
-.hideOverlay{
-    display: none;
+.hideOverlay {
+  display: none;
 }
 
-#overlay{
-    width: 1000%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: black;
-    opacity: 60%;
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal-right {
+  position: relative;
+  transform: translateX(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal-left {
+  position: relative;
+  transform: translateX(-150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal-top {
+  position: relative;
+  transform: translateY(-150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.active {
+  transform: translateY(0) translateX(0);
+  opacity: 1;
+}
+
+#overlay {
+  width: 1000%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 60%;
 }
 
 .fa-solid .fa-xmark {
-    color: black; /* Change the icon color to green */
-    font-size: 24px; /* Increase the icon size to 24 pixels */
+  color: black; /* Change the icon color to green */
+  font-size: 24px; /* Increase the icon size to 24 pixels */
 }
 
-#faqAnswer1{
+#faqAnswer1 {
+  width: 100%;
+  padding: 20px;
+}
+
+.hideAnswer {
+  display: none;
+}
+
+.title {
+  position: relative;
+  opacity: 1;
+  animation: title;
+  transition: 1s all ease;
+}
+.bounce-active {
+  position: relative;
+  transform: translateX(0px);
+  opacity: 1;
+  animation: bounce;
+  transition: 1s all ease;
+}
+
+@keyframes title {
+  0% {
+    width: 0px;
+    opacity: 0;
+  }
+  100% {
     width: 100%;
-    padding: 20px;
+    opacity: 1;
+  }
 }
 
-.hideAnswer{
-    display: none;
+@keyframes bounce {
+  0% {
+    transform: translateX(0px);
+    opacity: 0;
+  }
+  25% {
+    transform: translateX(-20px);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translateX(20px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
